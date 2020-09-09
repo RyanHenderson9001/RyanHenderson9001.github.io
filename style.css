@@ -17,7 +17,9 @@ header{
   font-family: serif, Helvetica, sans-serif;
   background-color:gray;
 }
-
+section1 p{
+  text-align: center;
+}
 h1 {
   color: rgb(36, 75, 36);
   text-align: center;
