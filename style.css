@@ -39,3 +39,16 @@ p {
   font-family: sans-serif;
   font-size: 20px;
 }
+/*code for stylizing links*/
+a:link{ 
+  color: green;
+}
+a:visited{ 
+  color: purple;
+}
+a:hover{ 
+  color: lightgreen;
+}
+a:active{ 
+  color: darkgreen;
+}
