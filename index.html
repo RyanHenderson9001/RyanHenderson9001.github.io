@@ -9,6 +9,7 @@
   <!-- import of the normlize css-->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
     type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -16,6 +17,14 @@
   <header>
     <h1>Ryan Henderson</h1>
     <h3>Aspiring software developer</h3>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <hr>
   </header>
 
@@ -45,12 +54,11 @@
               </li>
             </ul>
             <p>Please look through the site and contact me if interested.</p>
-            <hr>
           </div>
         </div>
       </article>
     </div>
-
+    <hr>
     <article id="about">
       <div class="wrapper">
         <h2>About me</h2>
@@ -66,7 +74,7 @@
       </div>
     </article>
 
-
+    <hr>
     <div class="wrapper">
       <article id="portfolio">
         <h2>Portfolio</h2>
@@ -92,35 +100,44 @@
             <a href="https://www.linkedin.com/in/ryan-henderson-b24b27171/" target="_blank">Project example</a>
           </div>
         </div>
-    </div>
+      </article>
     </div>
   </main>
 
 
   <footer>
+    <article id="contact">
+    <div class='group'>
+      <div class='item'>
+        <h2> Contact Ryan</h2>
+        <p>If you would like to get in contact or follow me, I can be found here:
+        <ol>
+          <!--ordered list of my contacts-->
+          <li><a href = "RyanHenderson9001@gmail.com">Send Email</a></li>
+          <li><a href="https://github.com/RyanHenderson9001" target="_blank"> Github</a></li>
+          <li><a href="https://www.linkedin.com/in/ryan-henderson-b24b27171/" target="_blank">Linkedin</a></li>
+        </ol>
+      </div>
+      <div class='item'>
+        <form action="https://formspree.io/f/xrgoppnk" method="POST">
+          <label>
+            Your email:
+            <input type="text" name="_replyto">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
 
-    <h2> Contact Ryan</h2>
-    <p>If you would like to get in contact or follow me, I can be found here:
-    <ol>
-      <!--ordered list of my contacts-->
-      <li><a href="https://github.com/RyanHenderson9001" target="_blank"> Github</a></li>
-      <li><a href="https://www.linkedin.com/in/ryan-henderson-b24b27171/" target="_blank">Linkedin</a></li>
-    </ol>
-    <form action="https://formspree.io/f/xrgoppnk" method="POST">
-      <label>
-        Your email:
-        <input type="text" name="_replyto">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-      </label>
+          <!-- your other form fields go here -->
 
-      <!-- your other form fields go here -->
+          <button type="submit">Send</button>
+        </form>
 
-      <button type="submit">Send</button>
-    </form>
-    <p>I'd love to hear from you =]</p>
+        <p>I'd love to hear from you =]</p>
+      </div>
+    </div>
+    </article>
   </footer>
 
   <script src="script.js"></script>

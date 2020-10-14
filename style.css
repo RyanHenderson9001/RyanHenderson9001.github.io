@@ -18,30 +18,49 @@ img.rounded {
 
 main h2 {
   font-size: 28px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 400;
+  font-family: 'Playfair Display', serif;
 }
 
 main h3 {
   font-size: 22px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 400;
+  font-family: 'Playfair Display', serif;
 }
 
 main p {
- font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
  line-height: 1.5em;
  margin-bottom: 0em;
 }
 
-/* Header */
+/* Header + Nav*/
 
 header {
   background-color: #6b655b;
   margin-bottom: 40px;
   display: block;
 }
-
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header nav ul {
+  display:flex;
+  flex-direction: row;
+  padding-left: 20px;
+  list-style: none;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px 0 0;
+}
+header nav ul li a:visited{
+  color: darkblue;
+}
+header nav ul li:last-child a {
+  margin-right: 20px;
+}
 header h1 {
   color: #eff0e5;
   text-align: center;
@@ -53,6 +72,16 @@ header h1 {
 
 header h3{
   text-align:center;
+}
+/*footer */
+
+
+/*forms */
+footer input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 /*  Main */
 
@@ -86,9 +115,21 @@ main .intro {
   margin: 10px;
 }
 
-/* Groups & Items  (Desktop) */
+/* Media Query Desktop */
 
 @media all and (min-width: 800px) {
+/*header and Nav desktop*/
+
+  header h1 {
+    margin: 14px 0; 
+    padding-top: 0;
+  }
+
+  header nav ul li a:hover {
+    color: #bdbdbd;
+  }
+/*group and wrapper for desktop */
+
   .wrapper {
     width: 80%;
     margin: auto;
@@ -112,3 +153,4 @@ main .intro {
   padding: 20px 0 30px 0;
   margin: 120px 0;
 }
+
