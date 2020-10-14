@@ -1,54 +1,114 @@
-/*CSS file for intro website */
-/*sets background to a brown with 20 pixel margins*/
+
+/* General Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Montserrat:wght@300;700&family=Nanum+Pen+Script&display=swap');
+
 body {
-  background-color:burlywood;
-  margin: 20px;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
-/*class called center to help me center imgs*/
-.center {
+
+img {
+  width: 100%;
+}
+
+img.rounded {
+  border-radius: 8px;
+}
+
+main h2 {
+  font-size: 28px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+}
+
+main h3 {
+  font-size: 22px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+}
+
+main p {
+ font-family: 'Montserrat', sans-serif;
+ line-height: 1.5em;
+ margin-bottom: 0em;
+}
+
+/* Header */
+
+header {
+  background-color: #6b655b;
+  margin-bottom: 40px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
 
-header{
-  font-size: 30px;
-  font-family: serif, Helvetica, sans-serif;
-  background-color:gray;
-}
-section1 {
+header h1 {
+  color: #eff0e5;
   text-align: center;
-}
-h1 {
-  color: rgb(36, 75, 36);
-  text-align: center;
-  font-family: serif;
+  margin: 0;
+  padding: 20px 0;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 56px;
 }
 
-h2{
-  font-size:30px;
+header h3{
   text-align:center;
-  font-family: serif;
 }
-h3{
-  font-family: serif;
-  text-align: center;
+/*  Main */
+
+main  .wrapper  h2 {
+  padding-left: 10px;
+  margin-bottom: 0;
 }
-p {
-  font-family: sans-serif;
-  font-size: 20px;
+
+main .intro {
+  font-size: 24px;
+  color: #6b655b;
 }
-/*code for stylizing links*/
-a:link{ 
-  color: green;
+
+/* Groups & Items  (Mobile First) */
+.wrapper {
+  width: 100%;
 }
-a:visited{ 
-  color: purple;
+
+.group {
+  display: flex;
+  flex-direction: column;
 }
-a:hover{ 
-  color: lightgreen;
+
+.item {
+  flex: 1;
+  margin: 10px;
 }
-a:active{ 
-  color: darkgreen;
+
+.item-double {
+  flex: 2;
+  margin: 10px;
+}
+
+/* Groups & Items  (Desktop) */
+
+@media all and (min-width: 800px) {
+  .wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+}
+
+/* ARTICLE SECTIONS */
+
+#home, #portfolio, #contact {
+  margin-bottom: 120px;
+}
+
+/* ABOUT ARTICLE */
+
+#about {
+  background-color: #c5c0b8;
+  padding: 20px 0 30px 0;
+  margin: 120px 0;
 }
