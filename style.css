@@ -11,9 +11,11 @@ body {
 img {
   width: 100%;
 }
-
 img.rounded {
   border-radius: 8px;
+  min-width: 30%;
+  min-height: 50%;
+  max-height: 50%;
 }
 
 main h2 {
@@ -73,6 +75,36 @@ header h1 {
 header h3{
   text-align:center;
 }
+/*  Main */
+
+main  .wrapper  h2 {
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+.item p{
+  font-size: 24px;
+}
+.item-double p{
+  font-size: 24px;
+}
+main .intro {
+  font-size: 32px;
+  color: #6b655b;
+}
+
+/* Groups & Items  (Mobile First) */
+ .wrapper {
+  width: 100%;
+} 
+.group {
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
 /*footer */
 
 
@@ -83,36 +115,20 @@ footer input[type=text] {
   margin: 8px 0;
   box-sizing: border-box;
 }
-/*  Main */
-
-main  .wrapper  h2 {
-  padding-left: 10px;
-  margin-bottom: 0;
+/* form test*/
+.form-style-1 {
+	max-width: 400px;
+	padding: 20px 12px 10px 20px;
 }
-
-main .intro {
-  font-size: 24px;
-  color: #6b655b;
+.form-style-1 li {
+	padding: 0;
+	list-style: none;
+	margin: 10px 0 0 0;
 }
-
-/* Groups & Items  (Mobile First) */
-.wrapper {
-  width: 100%;
-}
-
-.group {
-  display: flex;
-  flex-direction: column;
-}
-
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
-  margin: 10px;
+.form-style-1 label{
+	margin:0 0 3px 0;
+	padding:0px;
+	font-weight: bold;
 }
 
 /* Media Query Desktop */
