@@ -3,43 +3,84 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Montserrat:wght@300;700&family=Nanum+Pen+Script&display=swap');
 
-body {
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+.next-1{
+  border:1px;
+}
+.next-2{
+  border: 1px;
+}
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: radial-gradient(circle, rgba(189,56,16,1) 0%, rgba(0,0,0,0.07326680672268904) 100%);
+}
+.footer{
+  background: radial-gradient(circle, rgba(189,56,16,1) 0%, rgba(0,0,0,0.07326680672268904) 100%);
+}
+
+ul{
+  list-style: none;
+}
+
+.main {
+  text-align: left;
+  max-width: 100%;
+  background: radial-gradient(circle, rgba(189,56,16,1) 0%, rgba(0,0,0,0.07326680672268904) 100%);
+}
+
+
+.aside-1 {
+  background: radial-gradient(circle, rgba(189,56,16,1) 0%, rgba(0,0,0,0.07326680672268904) 100%);
+  max-width: 50%;
+}
+
+.aside-2 {
+  max-width: 50%;
+
+}
+.aside-2 ul{
+  list-style: none;
+
+}
+main  .wrapper  h2 {
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+main h2{
+  text-align: center;
+}
+.item p{
+  font-size: 24px;
+}
+.item-double p{
+  font-size: 24px;
+}
+main .intro {
+  font-size: 32px;
+  color: #6b655b;
+}
+header h1 {
+  color: #eff0e5;
+  text-align: center;
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  padding: 20px 0;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 56px;
+  text-shadow: 2px 2px 4px #000000;
 }
-
-img {
-  width: 100%;
-}
-img.rounded {
-  border-radius: 8px;
-  min-width: 30%;
-  min-height: 50%;
-  max-height: 50%;
-}
-
-main h2 {
-  font-size: 28px;
-  font-family: 'Playfair Display', serif;
-}
-
-main h3 {
-  font-size: 22px;
-  font-family: 'Playfair Display', serif;
-}
-
-main p {
-font-family: 'Playfair Display', serif;
- line-height: 1.5em;
- margin-bottom: 0em;
-}
-
 /* Header + Nav*/
 
 header {
   background-color: #6b655b;
-  margin-bottom: 40px;
-  display: block;
 }
 header nav {
   display: flex;
@@ -63,50 +104,48 @@ header nav ul li a:visited{
 header nav ul li:last-child a {
   margin-right: 20px;
 }
-header h1 {
-  color: #eff0e5;
-  text-align: center;
-  margin: 0;
-  padding: 20px 0;
-  font-family: 'Nanum Pen Script', cursive;
-  font-size: 56px;
-}
-
 header h3{
   text-align:center;
 }
-/*  Main */
-
-main  .wrapper  h2 {
-  padding-left: 10px;
-  margin-bottom: 0;
-}
-.item p{
-  font-size: 24px;
-}
-.item-double p{
-  font-size: 24px;
-}
-main .intro {
-  font-size: 32px;
-  color: #6b655b;
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: rgb(189,56,16);
+  background: radial-gradient(circle, rgba(189,56,16,1) 0%, rgba(0,0,0,0.07326680672268904) 100%);
 }
 
-/* Groups & Items  (Mobile First) */
- .wrapper {
-  width: 100%;
-} 
-.group {
-  display: flex;
-  flex-direction: column;
-}
-.item {
-  flex: 1;
-  margin: 10px;
+img {
+  max-width: 100%;
 }
 
-/*footer */
+main h2 {
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+}
 
+main h3 {
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+}
+
+main p {
+font-family: 'Playfair Display', serif;
+ line-height: 1.5em;
+ margin-bottom: 0em;
+}
+/* ARTICLE SECTIONS */
+
+#home, #portfolio, #contact {
+  margin-bottom: 120px;
+}
+
+/* ABOUT ARTICLE */
+
+#about {
+  background-color: #c5c0b8;
+  padding: 20px 0 30px 0;
+  margin: 120px 0;
+}
 
 /*forms */
 footer input[type=text] {
@@ -131,42 +170,21 @@ footer input[type=text] {
 	font-weight: bold;
 }
 
-/* Media Query Desktop */
 
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .aside { flex: 1 auto; }
+  .next {flex:1 auto;}
+}
+
+/* Large screens */
 @media all and (min-width: 800px) {
-/*header and Nav desktop*/
-
-  header h1 {
-    margin: 14px 0; 
-    padding-top: 0;
-  }
-
-  header nav ul li a:hover {
-    color: #bdbdbd;
-  }
-/*group and wrapper for desktop */
-
-  .wrapper {
-    width: 80%;
-    margin: auto;
-  }
-
-  .group {
-    flex-direction: row;
-  }
+  /* We invert order of first sidebar and main
+   * And tell the main element to take twice as much width as the other two sidebars 
+   */
+  .main { flex: 2 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
 }
-
-/* ARTICLE SECTIONS */
-
-#home, #portfolio, #contact {
-  margin-bottom: 120px;
-}
-
-/* ABOUT ARTICLE */
-
-#about {
-  background-color: #c5c0b8;
-  padding: 20px 0 30px 0;
-  margin: 120px 0;
-}
-
